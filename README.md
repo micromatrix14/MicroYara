@@ -21,7 +21,7 @@ A lightweight IDE for writing, compiling, and testing [YARA](https://virustotal.
 
 ## Screenshot
 
-<!-- Add a screenshot here: ![MicroYara](screenshot.png) -->
+![MicroYara](images/screenshot.png)
 
 ## Prerequisites
 
