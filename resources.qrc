@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>failed.png</file>
+        <file>success.png</file>
+        <file>loading.png</file>
+        <file>bin.png</file>
+        <file>hammer.png</file>
+        <file>app icon.ico</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1187</width>
+    <height>696</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MicroYara</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/app icon.ico</normaloff>:/app icon.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">outline:none</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="background_wdgt" native="true">
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#background_wdgt{
+	background-color: rgb(30, 30, 30);
+}</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QSplitter" name="developing_scanning_splitter">
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QSplitter::handle:horizontal{
+width: 4px;
+background-color: rgb(45, 124, 158);
+}
+QSplitter::handle:vertical{
+height: 4px;
+background-color: rgb(45, 124, 158);
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <widget class="QWidget" name="widget_2" native="true">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QSplitter" name="code_compilationresult_splitter">
+            <property name="orientation">
+             <enum>Qt::Orientation::Vertical</enum>
+            </property>
+            <widget class="CodeEditor" name="code_editor">
+             <property name="styleSheet">
+              <string notr="true">QPlainTextEdit{
+	background-color: rgb(46, 47, 48);
+}</string>
+             </property>
+             <property name="lineWrapMode">
+              <enum>QPlainTextEdit::LineWrapMode::NoWrap</enum>
+             </property>
+             <property name="placeholderText">
+              <string>Code</string>
+             </property>
+            </widget>
+            <widget class="QPlainTextEdit" name="output_txt">
+             <property name="styleSheet">
+              <string notr="true">QPlainTextEdit{
+	background-color: rgb(46, 47, 48);
+}</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="placeholderText">
+              <string>Output</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true">
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QPushButton" name="build_btn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Build the YARA code&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;hint:&lt;/span&gt; it is triggered after the entered timeout&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: transparent;
+border:none;
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/hammer.png</normaloff>:/hammer.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="clear_output_btn">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clear the output&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+background-color: transparent;
+border:none;
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/bin.png</normaloff>:/bin.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="compilation_timeout_txt">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Compilation timeout (1-10) seconds</string>
+               </property>
+               <property name="text">
+                <string>5</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="placeholderText">
+                <string>Compilation timeout (1-10) seconds</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="namespace_txt">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>Namespace</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="placeholderText">
+                <string>Namespace</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="compilation_args_txt">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Compilation arguments&lt;br/&gt;Example&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;--atom-quality-table=FILE&lt;/span&gt; path to a file with the atom quality table&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-d, --define=VAR=VALUE&lt;/span&gt; define external variable&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;--fail-on-warnings&lt;/span&gt; fail on warnings&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-E, --strict-escape&lt;/span&gt; warn on unknown escape sequences&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;--max-strings-per-rule=NUMBER&lt;/span&gt; set maximum number of strings per rule (default=10000)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-w, --no-warnings&lt;/span&gt; disable warnings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+               <property name="placeholderText">
+                <string>Compilation arguments</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="output_sign_lbl">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Compilation process state&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="styleSheet">
+             <string notr="true">QLabel{
+color: white;
+font: bold normal 14px &quot;Times New Roman&quot;;
+}</string>
+            </property>
+            <property name="text">
+             <string>Test the YARA file</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="Line" name="line">
+            <property name="styleSheet">
+             <string notr="true">QFrame{
+background-color: rgb(75, 75, 75)
+}</string>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="load_file_folder_btn">
+            <property name="minimumSize">
+             <size>
+              <width>330</width>
+              <height>80</height>
+             </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+background-color: rgb(74, 74, 74);
+}
+QPushButton{
+background-color: rgb(59, 59, 59);
+border-style:solid;
+border-width:2px;
+border-color: rgb(118, 118, 118);
+color: rgb(194, 198, 186);
+font: bold normal 20px &quot;Times New Roman&quot;;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Drage &amp;&amp; Drop Bin File/Folder Here
+or Click to Browse</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="unload_loaded_file_folder_btn">
+            <property name="minimumSize">
+             <size>
+              <width>330</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton:hover{
+background-color: rgb(74, 74, 74);
+}
+QPushButton{
+background-color: rgb(59, 59, 59);
+border-style:solid;
+border-width:2px;
+border-color: rgb(118, 118, 118);
+color: rgb(194, 198, 186);
+font: bold normal 20px &quot;Times New Roman&quot;;
+}
+QPushButton:pressed{
+padding-top:2px;
+padding-left:2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Unload the loaded File/Folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="loaded_file_folder_path_txt">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPlainTextEdit{
+	background-color: transparent;
+}</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::NoFrame</enum>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
+            </property>
+            <property name="horizontalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="plainText">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string>No loaded file or folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="scan_auto_checkbox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Scan Automatically upon compilation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="scanning_args_txt">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>40</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Compilation arguments&lt;br/&gt;Example&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-c,  --count&lt;/span&gt; print only number of matches&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-q,  --disable-console-logs&lt;/span&gt; disable printing console log messages&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-f,  --fast-scan&lt;/span&gt; fast matching mode&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-i,  --identifier=IDENTIFIER&lt;/span&gt; print only rules named IDENTIFIER&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;--max-process-memory-chunk=NUMBER&lt;/span&gt; set maximum chunk size while reading process memory (default=1073741824)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-l,  --max-rules=NUMBER&lt;/span&gt; abort scanning after matching a NUMBER of rules&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-x,  --module-data=MODULE=FILE&lt;/span&gt; pass FILE's content as extra data to MODULE&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-n,  --negate&lt;/span&gt; print only not satisfied rules (negate)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-N,  --no-follow-symlinks&lt;/span&gt; do not follow symlinks when scanning&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-m,  --print-meta&lt;/span&gt; print metadata&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-D,  --print-module-data&lt;/span&gt; print module data&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-M,  --module-names&lt;/span&gt; show module names&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-e,  --print-namespace&lt;/span&gt; print rules' namespace&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-S,  --print-stats&lt;/span&gt; print rules' statistics&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-s,  --print-strings&lt;/span&gt; print matching strings&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-L,  --print-string-length&lt;/span&gt; print length of matched strings&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-X,  --print-xor-key&lt;/span&gt; print xor key and plaintext of matched strings&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-g,  --print-tags&lt;/span&gt; print tags&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-r,  --recursive&lt;/span&gt; recursively search directories&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;--scan-list&lt;/span&gt; scan files listed in FILE, one per line&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-z,  --skip-larger=NUMBER&lt;/span&gt; skip files larger than the given size when scanning a directory&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-k,  --stack-size=SLOTS&lt;/span&gt; set maximum stack size (default=16384)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-t,  --tag=TAG&lt;/span&gt; print only rules tagged as TAG&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-p,  --threads=NUMBER&lt;/span&gt; use the specified NUMBER of threads to scan a directory&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;-a,  --timeout=SECONDS&lt;/span&gt; abort scanning after the given number of SECONDS&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+            <property name="placeholderText">
+             <string>Scanning arguments</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CodeEditor</class>
+   <extends>QPlainTextEdit</extends>
+   <header>codeeditor.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
