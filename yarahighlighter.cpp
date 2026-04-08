@@ -7,7 +7,7 @@ YaraHighlighter::YaraHighlighter(QObject *parent)
 
     // Keywords1: rule, meta, strings, condition — (#FF8080)
     keywords1Format.setForeground(QColor(255, 128, 128));
-    for (const QString &pattern : {"\\brule\\b", "\\bmeta\\b", "\\bstrings\\b", "\\bcondition\\b"}) {
+    for (const char* pattern : {"\\brule\\b", "\\bmeta\\b", "\\bstrings\\b", "\\bcondition\\b"}) {
         rule.pattern = QRegularExpression(pattern);
         rule.format = keywords1Format;
         highlightingRules.append(rule);
@@ -15,7 +15,7 @@ YaraHighlighter::YaraHighlighter(QObject *parent)
 
     // Keywords2: integer functions — (#FF8080)
     keywords2Format.setForeground(QColor(255, 128, 128));
-    for (const QString &pattern : {"\\bint8\\b", "\\bint16\\b", "\\bint32\\b",
+    for (const char* pattern : {"\\bint8\\b", "\\bint16\\b", "\\bint32\\b",
              "\\bint8be\\b", "\\bint16be\\b", "\\bint32be\\b",
              "\\buint16\\b", "\\buint32\\b",
              "\\buint8be\\b", "\\buint16be\\b", "\\buint32be\\b"}) {
@@ -26,7 +26,7 @@ YaraHighlighter::YaraHighlighter(QObject *parent)
 
     // Keywords3: modifiers — (#66A334)
     keywords3Format.setForeground(QColor(102, 163, 52));
-    for (const QString &pattern : {"\\bglobal\\b", "\\bprivate\\b", "\\bascii\\b",
+    for (const char *pattern : {"\\bglobal\\b", "\\bprivate\\b", "\\bascii\\b",
              "\\bbase64\\b", "\\bbase64wide\\b", "\\bnocase\\b",
              "\\bwide\\b", "\\bfullword\\b"}) {
         rule.pattern = QRegularExpression(pattern);
@@ -36,7 +36,7 @@ YaraHighlighter::YaraHighlighter(QObject *parent)
 
     // Keywords4: operators/boolean/built-ins — (#45C6D6)
     keywords4Format.setForeground(QColor(69, 198, 214));
-    for (const QString &pattern : {"\\ball\\b", "\\bany\\b", "\\bat\\b",
+    for (const char* pattern : {"\\ball\\b", "\\bany\\b", "\\bat\\b",
              "\\bcontains\\b", "\\bentrypoint\\b", "\\bfalse\\b",
              "\\bfilesize\\b", "\\bfor\\b", "\\bin\\b",
              "\\bmatches\\b", "\\bof\\b", "\\bthem\\b",
